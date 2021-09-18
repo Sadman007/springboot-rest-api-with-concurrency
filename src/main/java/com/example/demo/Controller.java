@@ -18,7 +18,7 @@ public class Controller {
 	@Autowired
 	private PrimeNumberService primeNumberService;
 
-	@GetMapping(value = "primes-count-async", produces = MediaType.APPLICATION_JSON_VALUE)
+	@GetMapping(value = "primes-count-multithreaded", produces = MediaType.APPLICATION_JSON_VALUE)
 	public Map<String, Integer> getNumberPropertiesCountAsync (@RequestParam Integer n) throws InterruptedException, ExecutionException {
 		Map<String, Integer> response = new HashMap<String, Integer>();
 		long st = System.currentTimeMillis();
